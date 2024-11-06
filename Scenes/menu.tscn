@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cse366qywy1bp"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_1cbmn"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_1cbmn")
+
+[node name="Iniciar Jogo" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 256.0
+offset_bottom = 96.0
+text = "Iniciar Jogo"
+
+[node name="Continuar Jogo" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 160.0
+text = "Continuar Jogo"
+
+[node name="Configurações" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 256.0
+offset_bottom = 224.0
+text = "Configurações"
