@@ -77,9 +77,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ld76v")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
-"speed": 1.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -90,7 +90,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Hurt",
-"speed": 3.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -127,14 +127,15 @@ animations = [{
 "speed": 16.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Rat" type="CharacterBody2D"]
 script = ExtResource("1_hy378")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(65, 64)
-scale = Vector2(3.9375, 4)
+position = Vector2(33, 32)
+scale = Vector2(1.9375, 2)
 sprite_frames = SubResource("SpriteFrames_jxno1")
 animation = &"Death"
 autoplay = "Idle"
-frame_progress = 0.527077
+frame = 3
+frame_progress = 1.0

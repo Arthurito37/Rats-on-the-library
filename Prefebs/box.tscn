@@ -1,0 +1,74 @@
+[gd_scene load_steps=13 format=3 uid="uid://cvgbucb02njci"]
+
+[ext_resource type="Texture2D" uid="uid://cj03oib3d1cl1" path="res://Sprites/box/1.png" id="1_5h73m"]
+[ext_resource type="Texture2D" uid="uid://d00admiivgdox" path="res://Sprites/box/2.png" id="2_thls4"]
+[ext_resource type="Texture2D" uid="uid://dko5c8au7vhc1" path="res://Sprites/box/3.png" id="3_gmjfa"]
+[ext_resource type="Texture2D" uid="uid://qlmw7tabfaax" path="res://Sprites/box/4.png" id="4_s7eq3"]
+[ext_resource type="Texture2D" uid="uid://knyqbd1e5ghs" path="res://Sprites/box/5.png" id="5_crva1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwg5h"]
+atlas = ExtResource("1_5h73m")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etd3x"]
+atlas = ExtResource("2_thls4")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvti1"]
+atlas = ExtResource("3_gmjfa")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0nnx"]
+atlas = ExtResource("4_s7eq3")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvgs8"]
+atlas = ExtResource("5_crva1")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83m14"]
+atlas = ExtResource("1_5h73m")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7t17l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwg5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etd3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvti1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0nnx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvgs8")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83m14")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Box" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, 32)
+scale = Vector2(0.125, 0.125)
+sprite_frames = SubResource("SpriteFrames_7t17l")
+animation = &"Hit"
+frame_progress = 0.544686

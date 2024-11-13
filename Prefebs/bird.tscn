@@ -1,0 +1,98 @@
+[gd_scene load_steps=14 format=3 uid="uid://befbxlohfvxbv"]
+
+[ext_resource type="Texture2D" uid="uid://dpd2qnk15yaad" path="res://Sprites/Bird/Walk.png" id="1_gl60m"]
+[ext_resource type="Texture2D" uid="uid://uv5hixn6yyg7" path="res://Sprites/Bird/Idle.png" id="2_xtx5d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnev7"]
+atlas = ExtResource("1_gl60m")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqgum"]
+atlas = ExtResource("1_gl60m")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bpnv"]
+atlas = ExtResource("1_gl60m")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdbcl"]
+atlas = ExtResource("1_gl60m")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh1uk"]
+atlas = ExtResource("1_gl60m")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xjkd"]
+atlas = ExtResource("1_gl60m")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjnyo"]
+atlas = ExtResource("2_xtx5d")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhjxx"]
+atlas = ExtResource("2_xtx5d")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8ra5"]
+atlas = ExtResource("2_xtx5d")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oym3"]
+atlas = ExtResource("2_xtx5d")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5vers"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnev7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqgum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bpnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdbcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh1uk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xjkd")
+}],
+"loop": true,
+"name": &"Fly",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjnyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhjxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8ra5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8oym3")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
+[node name="bird" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, 32)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5vers")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.460328

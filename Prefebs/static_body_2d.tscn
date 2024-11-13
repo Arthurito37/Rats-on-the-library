@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxke04h6ejhfs"]
+
+[ext_resource type="Texture2D" uid="uid://m40c1ka2xo5o" path="res://Sprites/Stairs/1.png" id="1_eb1uh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hc2af"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_eb1uh")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, 32)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_hc2af")
+animation = &"Idle"

@@ -1,9 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cse366qywy1bp"]
-
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_1cbmn"]
+[gd_scene format=3 uid="uid://cse366qywy1bp"]
 
 [node name="Menu" type="Node2D"]
-script = ExtResource("1_1cbmn")
 
 [node name="Iniciar Jogo" type="Button" parent="."]
 offset_left = 64.0
